@@ -1,0 +1,168 @@
+/*
+ * Basic styling for the WalkRL project page.
+ *
+ * The design is intentionally simple and self‑contained, avoiding external
+ * frameworks so the page works offline. Feel free to tweak colours or
+ * spacing to match your branding. Responsive styles ensure the layout
+ * remains usable on mobile devices.
+ */
+
+:root {
+    /* Primary accent colour used for prominent buttons and highlights */
+    --primary: #0066cc;
+    --text-colour: #333;
+    --background-colour: #ffffff;
+    --button-background: #e5e5e5;
+    --button-disabled: #cccccc;
+    --button-text: #333;
+    --button-primary-text: #fff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-colour);
+    color: var(--text-colour);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+h1.title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #d5d5d5;
+}
+
+.button.primary {
+    background-color: var(--primary);
+    color: var(--button-primary-text);
+}
+
+.button.primary:hover {
+    background-color: #004a99;
+}
+
+.button.disabled {
+    background-color: var(--button-disabled);
+    color: var(--button-text);
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Highlight card for the video comparison call-to-action */
+.highlight {
+    background-color: #f8f9fb;
+    border-left: 4px solid var(--primary);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.highlight h2 {
+    margin-top: 0;
+}
+
+.highlight .button {
+    margin-top: 0.5rem;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 0.8rem;
+    overflow-x: auto;
+    border-radius: 4px;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+}
+
+/* Teaser image styling */
+.teaser-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1.title {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
