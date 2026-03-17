@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WalkRL Video Comparison</title>
+  <!-- Include viewer styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Load YouTube IFrame API asynchronously -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+  <header class="container">
+    <h1>WalkRL Video Comparison</h1>
+    <div class="buttons">
+      <button id="toggleGallery" class="button">Gallery</button>
+      <button id="toggleCompare" class="button primary">Compare</button>
+    </div>
+  </header>
+  <main class="container">
+    <!-- Gallery Section -->
+    <section id="gallerySection">
+      <h2>Video Library</h2>
+      <p>Select a video to load it into the comparison panel.</p>
+      <div id="videoGrid"></div>
+    </section>
+    <!-- Comparison Section -->
+    <section id="compareSection">
+      <h2>Compare Videos</h2>
+      <p>Select two videos and synchronise their playback for side‑by‑side comparison.</p>
+      <div class="select-container">
+        <select id="selectLeft"></select>
+        <select id="selectRight"></select>
+        <button id="loadPlayers" class="button">Load Players</button>
+        <button id="syncPlay" class="button primary">Sync Play</button>
+      </div>
+      <div class="players">
+        <div><iframe id="playerLeft" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+        <div><iframe id="playerRight" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+      </div>
+    </section>
+  </main>
+  <footer class="container">
+    <p>© 2026 WalkRL Project</p>
+  </footer>
+  <!-- Application logic -->
+  <script src="script.js"></script>
+</body>
+</html>
