@@ -61,26 +61,26 @@ Synergistic muscle‑controlled walking – Learning env. – Around view | SNU 
 https://youtube.com/shorts/diMExi0Iq4E
 
 Synergistic muscle‑controlled 0.7 m/s walking – Sagittal view | SNU Sports Eng. Lab:
-
+https://youtube.com/shorts/sumCu4m6I2Y?feature=share
 
 Synergistic muscle‑controlled 0.7 m/s walking – Frontal view | SNU Sports Eng. Lab:
-
+https://youtube.com/shorts/iHISbEFn5TA?feature=share
 
 Synergistic muscle‑controlled 1.2 m/s walking – Sagittal view | SNU Sports Eng. Lab:
-
+https://youtube.com/shorts/hiaXLBP70Vk?feature=share
 
 Synergistic muscle‑controlled 1.2 m/s walking – Frontal view | SNU Sports Eng. Lab:
-
+https://youtube.com/shorts/XvFmis5tfKM?feature=share
 
 Synergistic muscle‑controlled 1.8 m/s walking – Sagittal view | SNU Sports Eng. Lab:
-
+https://youtube.com/shorts/EReJWTIqd8U?feature=share
 
 Synergistic muscle‑controlled 1.8 m/s walking – Frontal view | SNU Sports Eng. Lab:
-
+https://youtube.com/shorts/joBIzwvfcSQ?feature=share
 
 Synergistic muscle‑controlled downhill 1.2 m/s walking (−5°) – Sagittal view | SNU Sports Eng. Lab:
-
+https://youtube.com/shorts/FEhnDq93reM?feature=share
 
 Synergistic muscle‑controlled uphill 1.2 m/s walking (+5°) – Sagittal view | SNU Sports Eng. Lab:
-
+https://youtube.com/shorts/TlbLoZhOS3s?feature=share
 

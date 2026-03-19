@@ -6,44 +6,133 @@
   <title>WalkRL Video Comparison</title>
   <!-- Include viewer styles -->
   <link rel="stylesheet" href="style.css" />
-  <!-- Load YouTube IFrame API asynchronously -->
-  <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
   <header class="container">
-    <h1>WalkRL Video Comparison</h1>
-    <div class="buttons">
-      <button id="toggleGallery" class="button">Gallery</button>
-      <button id="toggleCompare" class="button primary">Compare</button>
-    </div>
+    <h1 class="page-title">WalkRL Video Results</h1>
+    <p class="page-subtitle">RL locomotion rollout comparison viewer with synchronized playback.</p>
   </header>
+
   <main class="container">
+    <!-- Compare Section -->
+    <section class="compare-card" id="compareSection">
+      <div class="compare-head">
+        <div>
+          <h2>Compare Rollouts</h2>
+          <p>Select two videos, then synchronize playback with a single button.</p>
+        </div>
+        <div class="compare-actions">
+          <button id="loadPlayers" class="button">Load Players</button>
+          <button id="syncPlay" class="button primary" disabled>Sync Play</button>
+          <button id="pauseBoth" class="button" disabled>Pause</button>
+        </div>
+      </div>
+
+      <div id="originWarning" class="origin-warning" hidden></div>
+
+      <div class="select-container">
+        <select id="selectVideoA" aria-label="Video A"></select>
+        <select id="selectVideoB" aria-label="Video B"></select>
+      </div>
+
+      <div class="players">
+        <div class="player-slot" id="playerLeftSlot">
+          <div id="playerLeftThumb" class="thumb-placeholder"></div>
+          <iframe
+            id="playerLeft"
+            title="Video Left"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="player-slot" id="playerRightSlot">
+          <div id="playerRightThumb" class="thumb-placeholder"></div>
+          <iframe
+            id="playerRight"
+            title="Video Right"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
     <!-- Gallery Section -->
     <section id="gallerySection">
       <h2>Video Library</h2>
       <p>Select a video to load it into the comparison panel.</p>
+
+      <div class="filters" aria-label="Video filters">
+        <select id="filterPolicy" aria-label="Filter by policy"></select>
+        <select id="filterTerrain" aria-label="Filter by terrain"></select>
+        <select id="filterView" aria-label="Filter by view"></select>
+      </div>
+
       <div id="videoGrid"></div>
     </section>
-    <!-- Comparison Section -->
-    <section id="compareSection">
-      <h2>Compare Videos</h2>
-      <p>Select two videos and synchronise their playback for side‑by‑side comparison.</p>
-      <div class="select-container">
-        <select id="selectLeft"></select>
-        <select id="selectRight"></select>
-        <button id="loadPlayers" class="button">Load Players</button>
-        <button id="syncPlay" class="button primary">Sync Play</button>
-      </div>
-      <div class="players">
-        <div><iframe id="playerLeft" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-        <div><iframe id="playerRight" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-      </div>
+
+    <!-- Filename rules (for how videos were named) -->
+    <section id="filenameRules" aria-label="Filename rules">
+      <h2>Filename Rules</h2>
+      <p>
+        Videos are named using tokens that describe the main control mode and the evaluation environment.
+      </p>
+      <details>
+        <summary>Token reference</summary>
+
+        <h3>Main Group Condition</h3>
+        <ul>
+          <li><code>ind_</code>: Independent</li>
+          <li><code>syn_</code>: Synergistic</li>
+        </ul>
+
+        <h3>Environment</h3>
+        <h4>Training Env</h4>
+        <ul>
+          <li><code>_uneven</code>: Randomized Uneven Terrain (±6°)</li>
+        </ul>
+        <p class="note">
+          (This video is representive terrain at 1.2 m/s walking speed)
+        </p>
+
+        <h4>Evaluating Env</h4>
+        <ul>
+          <li>
+            <code>_{float.1}mps</code>: <code>{speed}</code> m/s
+            <ul>
+              <li>If <code>_frontal</code>: on frontal plane</li>
+              <li>Else: on sagittal plane</li>
+            </ul>
+          </li>
+          <li><code>_downhill</code>: Ramp Descent (+5°)</li>
+          <li><code>_uphill</code>: Ramp Ascent (-5°)</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>References</summary>
+        <p>
+          Playlist:
+          <a href="https://www.youtube.com/playlist?list=PLTC1jtCs7DZjh0O9S3de6xdozHWO_i6Cx" target="_blank" rel="noreferrer">YouTube Playlist</a>
+        </p>
+        <p>
+          Title: Muscle Synergy Priors Enhance Biomechanical Fidelity in Predictive Musculoskeletal Locomotion Simulation
+          <br />
+          Preprinted in arXiv: 2603.10474
+          <br />
+          DOI:
+          <a href="https://doi.org/10.48550/arXiv.2603.10474" target="_blank" rel="noreferrer">doi.org/10.48550/arXiv.2603.10474</a>
+        </p>
+      </details>
     </section>
   </main>
+
   <footer class="container">
     <p>© 2026 WalkRL Project</p>
   </footer>
+
   <!-- Application logic -->
   <script src="script.js"></script>
 </body>
 </html>
+

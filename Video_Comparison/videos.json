@@ -1,6 +1,30 @@
 [
   {
-    "title": "Independent muscle‑controlled 1.2 m/s walking – Sagittal view",
+    "title": "Independent muscle‑controlled walking – Learning env. – Around view",
+    "policy": "Independent",
+    "terrain": "Uneven Terrain",
+    "speed": "1.2",
+    "view": "Around",
+    "youtube": "https://youtube.com/shorts/XYzgVLA2ezk?si=V_fs3hlobU6HEKFh"
+  },
+  {
+    "title": "Independent muscle‑controlled 0.7 m/s walking – Sagittal view",
+    "policy": "Independent",
+    "terrain": "Level Ground",
+    "speed": "0.7",
+    "view": "Sagittal",
+    "youtube": "https://youtube.com/shorts/sfHHjqCAYQE?si=yw4n_jjJF3Ca7JYO"
+  },
+  {
+    "title": "Independent muscle‑controlled 0.7 m/s walking – Frontal view",
+    "policy": "Independent",
+    "terrain": "Level Ground",
+    "speed": "0.7",
+    "view": "Frontal",
+    "youtube": "https://youtube.com/shorts/3HUabo3GDXM?si=XYGZW_Yz9StIKBKx"
+  },
+  {
+    "title": "Independent muscle‑controlled 1.2 m/s walking – Sagittal view",
     "policy": "Independent",
     "terrain": "Level Ground",
     "speed": "1.2",
@@ -8,43 +32,116 @@
     "youtube": "https://www.youtube.com/embed/x-Qeo1EMjSA"
   },
   {
-    "title": "Independent muscle‑controlled 1.2 m/s walking – Frontal view",
+    "title": "Independent muscle‑controlled 1.2 m/s walking – Frontal view",
     "policy": "Independent",
     "terrain": "Level Ground",
     "speed": "1.2",
     "view": "Frontal",
-    "youtube": "https://www.youtube.com/embed/XYzgVLA2ezk"
+    "youtube": "https://www.youtube.com/embed/nJBgkvjS_rc"
   },
   {
-    "title": "Synergy‑prior muscle‑controlled 1.2 m/s walking – Sagittal view",
-    "policy": "Synergy Prior",
+    "title": "Independent muscle‑controlled 1.8 m/s walking – Sagittal view",
+    "policy": "Independent",
+    "terrain": "Level Ground",
+    "speed": "1.8",
+    "view": "Sagittal",
+    "youtube": "https://www.youtube.com/embed/1B8lW37ZXRQ"
+  },
+  {
+    "title": "Independent muscle‑controlled 1.8 m/s walking – Frontal view",
+    "policy": "Independent",
+    "terrain": "Level Ground",
+    "speed": "1.8",
+    "view": "Frontal",
+    "youtube": "https://www.youtube.com/embed/5oNz30AzLzM"
+  },
+  {
+    "title": "Independent muscle‑controlled downhill 1.2 m/s walking (−5°) – Sagittal view",
+    "policy": "Independent",
+    "terrain": "Downhill",
+    "speed": "1.2",
+    "view": "Sagittal",
+    "youtube": "https://www.youtube.com/embed/sKAf_UQ-O6Y"
+  },
+  {
+    "title": "Independent muscle‑controlled uphill 1.2 m/s walking (+5°) – Sagittal view",
+    "policy": "Independent",
+    "terrain": "Uphill",
+    "speed": "1.2",
+    "view": "Sagittal",
+    "youtube": "https://www.youtube.com/embed/kjXYdIAXUE8"
+  },
+
+  {
+    "title": "Synergistic muscle‑controlled walking – Learning env. – Around view",
+    "policy": "Synergistic",
+    "terrain": "Uneven Terrain",
+    "speed": "1.2",
+    "view": "Around",
+    "youtube": "https://youtube.com/shorts/diMExi0Iq4E?si=68WtXfUfPx3QV2pN"
+  },
+  {
+    "title": "Synergistic muscle‑controlled 0.7 m/s walking – Sagittal view",
+    "policy": "Synergistic",
+    "terrain": "Level Ground",
+    "speed": "0.7",
+    "view": "Sagittal",
+    "youtube": "https://www.youtube.com/embed/sumCu4m6I2Y"
+  },
+  {
+    "title": "Synergistic muscle‑controlled 0.7 m/s walking – Frontal view",
+    "policy": "Synergistic",
+    "terrain": "Level Ground",
+    "speed": "0.7",
+    "view": "Frontal",
+    "youtube": "https://www.youtube.com/embed/iHISbEFn5TA"
+  },
+  {
+    "title": "Synergistic muscle‑controlled 1.2 m/s walking – Sagittal view",
+    "policy": "Synergistic",
     "terrain": "Level Ground",
     "speed": "1.2",
     "view": "Sagittal",
-    "youtube": "https://www.youtube.com/embed/1RhNvJd6Pu4"
+    "youtube": "https://www.youtube.com/embed/hiaXLBP70Vk"
   },
   {
-    "title": "Synergy‑prior muscle‑controlled 1.2 m/s walking – Frontal view",
-    "policy": "Synergy Prior",
+    "title": "Synergistic muscle‑controlled 1.2 m/s walking – Frontal view",
+    "policy": "Synergistic",
     "terrain": "Level Ground",
     "speed": "1.2",
     "view": "Frontal",
-    "youtube": "https://www.youtube.com/embed/8pQ_uYdxZxo"
+    "youtube": "https://www.youtube.com/embed/XvFmis5tfKM"
   },
   {
-    "title": "Independent muscle‑controlled 0.7 m/s walking – Sagittal view",
-    "policy": "Independent",
+    "title": "Synergistic muscle‑controlled 1.8 m/s walking – Sagittal view",
+    "policy": "Synergistic",
     "terrain": "Level Ground",
-    "speed": "0.7",
+    "speed": "1.8",
     "view": "Sagittal",
-    "youtube": "https://www.youtube.com/embed/dummy1"
+    "youtube": "https://www.youtube.com/embed/EReJWTIqd8U"
   },
   {
-    "title": "Synergy‑prior muscle‑controlled 0.7 m/s walking – Sagittal view",
-    "policy": "Synergy Prior",
+    "title": "Synergistic muscle‑controlled 1.8 m/s walking – Frontal view",
+    "policy": "Synergistic",
     "terrain": "Level Ground",
-    "speed": "0.7",
+    "speed": "1.8",
+    "view": "Frontal",
+    "youtube": "https://www.youtube.com/embed/joBIzwvfcSQ"
+  },
+  {
+    "title": "Synergistic muscle‑controlled downhill 1.2 m/s walking (−5°) – Sagittal view",
+    "policy": "Synergistic",
+    "terrain": "Downhill",
+    "speed": "1.2",
     "view": "Sagittal",
-    "youtube": "https://www.youtube.com/embed/dummy2"
+    "youtube": "https://www.youtube.com/embed/FEhnDq93reM"
+  },
+  {
+    "title": "Synergistic muscle‑controlled uphill 1.2 m/s walking (+5°) – Sagittal view",
+    "policy": "Synergistic",
+    "terrain": "Uphill",
+    "speed": "1.2",
+    "view": "Sagittal",
+    "youtube": "https://www.youtube.com/embed/TlbLoZhOS3s"
   }
 ]

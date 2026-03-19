@@ -76,6 +76,13 @@ main.container {
   background-color: #004a99;
 }
 
+.button:disabled {
+  background-color: var(--button-disabled);
+  color: var(--button-text);
+  cursor: default;
+  pointer-events: none;
+}
+
 .button.disabled {
   background-color: var(--button-disabled);
   color: var(--button-text);
@@ -86,6 +93,70 @@ main.container {
 /* Section toggling */
 #gallerySection, #compareSection {
   margin-top: 1rem;
+}
+
+/* Compare panel card */
+.compare-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.compare-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.compare-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Origin / JS API warning */
+.origin-warning {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  background: #fff3cd;
+  border: 1px solid #ffe69c;
+  color: #664d03;
+  font-size: 0.95rem;
+}
+
+/* Page intro typography */
+.page-title {
+  font-size: 1.9rem;
+}
+
+.page-subtitle {
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  color: #666;
+}
+
+/* Gallery filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.filters select {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 /* Grid of video cards */
@@ -142,6 +213,20 @@ main.container {
   font-size: 0.8rem;
 }
 
+.card .actions a {
+  flex: 1;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: var(--text-colour);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fb;
+}
+
 /* Comparison section */
 .select-container {
   display: flex;
@@ -171,6 +256,30 @@ main.container {
   height: 280px;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
+  display: none;
+}
+
+.player-slot {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.player-slot.loaded iframe {
+  display: block;
+}
+
+.thumb-placeholder {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  background-color: #e9ecef;
+  background-size: cover;
+  background-position: center;
+}
+
+.player-slot.loaded .thumb-placeholder {
+  display: none;
 }
 
 @media (max-width: 600px) {
