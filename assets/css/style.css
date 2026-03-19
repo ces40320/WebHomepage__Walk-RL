@@ -119,6 +119,132 @@ a:hover {
     margin-top: 0.5rem;
 }
 
+/* Compare section layout (ported from Video_Comparison page) */
+.compare-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.compare-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.select-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.8rem 0;
+    align-items: center;
+}
+
+.select-container select {
+    flex: 1;
+    min-width: 220px;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.compare-sides {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+    margin-top: 0.2rem;
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.side-panel .select-container {
+    display: none; /* hide A/B raw video dropdown; filters drive selection */
+}
+
+.side-panel .filters {
+    margin: 0;
+}
+
+.side-panel .filters select {
+    min-width: 0;
+    flex: 1;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.8rem 0 1rem 0;
+    align-items: center;
+}
+
+.filters select {
+    flex: 1;
+    min-width: 220px;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.player-slot {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.players iframe {
+    width: 100%;
+    border: 0;
+    display: none;
+    /* Source is close to square; keep frame square to avoid thick letterboxing. */
+    aspect-ratio: 1 / 1;
+    height: auto;
+}
+
+.player-slot.loaded iframe {
+    display: block;
+}
+
+.thumb-placeholder {
+    width: 100%;
+    /* Match square iframe aspect ratio */
+    padding-top: 100%;
+    background-color: #e9ecef;
+    background-size: cover;
+    background-position: center;
+}
+
+.player-slot.loaded .thumb-placeholder {
+    display: none;
+}
+
+.origin-warning {
+    margin-top: 0.5rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    background: #fff3cd;
+    border: 1px solid #ffe69c;
+    color: #664d03;
+    font-size: 0.95rem;
+}
+
 pre {
     background-color: #f4f4f4;
     padding: 0.8rem;
@@ -164,5 +290,9 @@ footer {
     .button {
         width: 100%;
         text-align: center;
+    }
+    /* aspect-ratio stays square on small screens */
+    .compare-sides {
+        grid-template-columns: 1fr;
     }
 }

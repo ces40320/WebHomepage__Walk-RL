@@ -8,40 +8,95 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Include main JS for interactivity -->
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/video-compare.js" defer></script>
 </head>
 <body>
     <header class="container">
         <h1 class="title">Muscle Synergy Priors Enhance Biomechanical Fidelity in Predictive Musculoskeletal Locomotion Simulation</h1>
-        <p class="authors">Ilseung Park*, Eunsik Choi*, Jangwhan Ahn, Jooeun Ahn</p>
+        <p class="authors">Ilseung Park*, Eunsik Choi*, Jangwhan Ahn, Jooeun Ahn†</p>
         <p class="affiliations">Carnegie Mellon University<br>
             Seoul National University – <a href="https://sports-engineering-lab.github.io" target="_blank">Sports Engineering Lab</a><br>
             UNC‑Chapel Hill &amp; NC State University
         </p>
         <!-- Top action buttons -->
         <nav class="buttons">
-            <a class="button" href="https://arxiv.org/pdf/2603.10474" target="_blank">Paper PDF</a>
+            <a class="button" href="https://arxiv.org/pdf/2603.10474" target="_blank">Preprint PDF</a>
             <a class="button" href="https://arxiv.org/abs/2603.10474" target="_blank">arXiv</a>
-            <a class="button primary" href="file:///C:/Users/ok/Documents/GitHub/WebHomepage__Walk-RL/Video_Comparison/index.html" target="_blank">WalkRL Results Gallery</a>
             <a class="button disabled" href="#">Code (Coming Soon)</a>
             <a class="button disabled" href="#">Dataset (Coming Soon)</a>
+            <a class="button primary" href="file:///C:/Users/ok/Documents/GitHub/WebHomepage__Walk-RL/Video_Comparison/index.html" target="_blank">Results Video</a>
         </nav>
     </header>
     <main class="container">
-        <!-- Highlighted card for the video comparison tool -->
-        <section class="highlight">
-            <h2>WalkRL Video Comparison</h2>
-            <p>Compare locomotion simulations interactively across different controllers.</p>
-            <a class="button primary" href="file:///C:/Users/ok/Documents/GitHub/WebHomepage__Walk-RL/Video_Comparison/index.html" target="_blank">Open WalkRL Video Comparison</a>
-        </section>
-        <!-- Abstract section -->
-        <section id="abstract">
-            <h2>Abstract</h2>
-            <p>Human locomotion emerges from high-dimensional neuromuscular control, making predictive musculoskeletal simulation challenging. We present a physiology-informed reinforcement-learning framework that constrains control using muscle synergies. We extracted a low-dimensional synergy basis from inverse musculoskeletal analyses of a small set of overground walking trials and used it as the action space for a muscle-driven three-dimensional model trained across variable speeds, slopes and uneven terrain. The resulting controller generated stable gait from 0.7-1.8 m/s and on  6 grades and reproduced condition-dependent modulation of joint angles, joint moments and ground reaction forces. Compared with an unconstrained controller, synergy-constrained control reduced non-physiological knee kinematics and kept knee moment profiles within the experimental envelope. Across conditions, simulated vertical ground reaction forces correlated strongly with human measurements, and muscle-activation timing largely fell within inter-subject variability. These results show that embedding neurophysiological structure into reinforcement learning can improve biomechanical fidelity and generalization in predictive human locomotion simulation with limited experimental data.</p>
+        <!-- Compare Section -->
+        <section class="highlight" id="compareSection">
+            <div class="compare-head">
+            <div>
+                <h2>Video Comparison (Independent vs. Synergistic)</h2>
+                <p>Select two videos, then synchronize playback with a single button.</p>
+            </div>
+            <div class="compare-actions">
+                <button id="loadPlayers" class="button">Load Players</button>
+                <button id="syncPlay" class="button primary" disabled>Sync Play</button>
+                <button id="pauseBoth" class="button" disabled>Pause</button>
+            </div>
+            </div>
+    
+            <div id="originWarning" class="origin-warning" hidden></div>
+    
+            <div class="compare-sides">
+                <div class="side-panel">
+                    <div class="select-container">
+                        <select id="selectVideoA" aria-label="Video A"></select>
+                    </div>
+                    <div class="filters" aria-label="Video filters for left (A)">
+                        <select id="filterPolicyA" aria-label="Filter by policy (A)"></select>
+                        <select id="filterTerrainA" aria-label="Filter by terrain (A)"></select>
+                        <select id="filterViewA" aria-label="Filter by view (A)"></select>
+                    </div>
+                </div>
+                <div class="side-panel">
+                    <div class="select-container">
+                        <select id="selectVideoB" aria-label="Video B"></select>
+                    </div>
+                    <div class="filters" aria-label="Video filters for right (B)">
+                        <select id="filterPolicyB" aria-label="Filter by policy (B)"></select>
+                        <select id="filterTerrainB" aria-label="Filter by terrain (B)"></select>
+                        <select id="filterViewB" aria-label="Filter by view (B)"></select>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="players">
+            <div class="player-slot" id="playerLeftSlot">
+                <div id="playerLeftThumb" class="thumb-placeholder"></div>
+                <iframe
+                id="playerLeft"
+                title="Video Left"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                ></iframe>
+            </div>
+            <div class="player-slot" id="playerRightSlot">
+                <div id="playerRightThumb" class="thumb-placeholder"></div>
+                <iframe
+                id="playerRight"
+                title="Video Right"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                ></iframe>
+            </div>
+            </div>
         </section>
         <!-- Teaser image placeholder -->
         <section id="teaser">
             <h2>Model Framework</h2>
             <img src="assets/images/Framework Diagram_Combined.png" alt="Teaser figure" class="teaser-image" />
+        </section>
+        <!-- Abstract section -->
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <p>Human locomotion emerges from high-dimensional neuromuscular control, making predictive musculoskeletal simulation challenging. We present a physiology-informed reinforcement-learning framework that constrains control using muscle synergies. We extracted a low-dimensional synergy basis from inverse musculoskeletal analyses of a small set of overground walking trials and used it as the action space for a muscle-driven three-dimensional model trained across variable speeds, slopes and uneven terrain. The resulting controller generated stable gait from 0.7-1.8 m/s and on  ±6º grades and reproduced condition-dependent modulation of joint angles, joint moments and ground reaction forces. Compared with an unconstrained controller, synergy-constrained control reduced non-physiological knee kinematics and kept knee moment profiles within the experimental envelope. Across conditions, simulated vertical ground reaction forces correlated strongly with human measurements, and muscle-activation timing largely fell within inter-subject variability. These results show that embedding neurophysiological structure into reinforcement learning can improve biomechanical fidelity and generalization in predictive human locomotion simulation with limited experimental data.</p>
         </section>
         <!-- Citation section -->
         <section id="citation">
