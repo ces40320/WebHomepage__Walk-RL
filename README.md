@@ -11,7 +11,7 @@ The site is designed to be deployed as a standalone GitHub Pages project (static
 - **`assets/images/Framework Diagram_Combined.png`**: Teaser figure used on the landing page (replace this file, or update the `src` in `index.html` if you rename it).
 - **`Video_Comparison/`**: Standalone “Results Video” viewer (gallery + synchronized compare). This folder also contains `videos.json` (video metadata) and `Filename_rules.md` (how video tokens were defined).
 
-## Customisation
+## Customization
 
 1. **Results Video link**: update the `href` of the “Results Video” button in `index.html` to point to the deployed URL for `Video_Comparison/index.html` (e.g. `Video_Comparison/index.html`).
 2. **Teaser image**: replace `assets/images/Framework Diagram_Combined.png` (or edit the image `src` in `index.html`).
